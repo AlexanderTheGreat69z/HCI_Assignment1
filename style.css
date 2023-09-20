@@ -1,0 +1,85 @@
+body{
+    background-image: linear-gradient(to bottom right, rgb(12, 12, 41), black, rgb(31, 31, 73));
+    background-size:  cover;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Comic Sans MS';
+}
+
+main{
+    display: flex;
+    min-height: 100%;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border: 15px solid white;
+    background-color: black;
+    border-radius: 5%;
+    padding: 5px 20px;
+    animation: trans2 2s ease-out 1;
+}
+
+.image > img{
+    width: 100%;
+    border-radius: 50%;
+    border: 15px solid white;
+    box-shadow: 0px 0px 50px white;
+    animation: trans1 2s ease-in-out 2s 1;
+    animation-fill-mode: both;
+    z-index: -1;
+}
+
+.content{
+    animation: content-appear 2s ease-in-out 2s 1;
+    animation-fill-mode: both;
+}
+
+.image, .container{
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@keyframes trans1 {
+    from{
+        rotate: 45deg;
+        margin-right: 100px;
+        opacity: 0%;
+    }
+    to{
+        rotate: 0deg;
+        margin-right: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes trans2 {
+    from{
+        width: 10%;
+    }
+    to{
+        width: 45%;
+    }
+}
+
+@keyframes content-appear {
+    from{
+        display: none;
+        opacity: 0;
+    }
+    to{
+        display: inline;
+        opacity: 1;
+    }
+}
+
