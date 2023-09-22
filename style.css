@@ -3,7 +3,7 @@ body{
     background-size:  cover;
     color: #ffffff;
     font-size: 18px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Montserrat', sans-serif;
 }
 
 main{
@@ -27,16 +27,26 @@ main{
     border-radius: 5%;
     padding: 5px 20px;
     animation: trans2 2s ease-out 1;
+    transition: box-shadow 0.25s;
 }
 
-.image > img{
+img{
+    position: relative;
+    transition: box-shadow 0.25s;
     width: 100%;
     border-radius: 50%;
     border: 15px solid white;
-    box-shadow: 0px 0px 50px white;
     animation: trans1 2s ease-in-out 2s 1;
     animation-fill-mode: both;
     z-index: -1;
+}
+
+.container:hover, img:hover{
+    box-shadow: 0px 0px 50px white;
+}
+
+.container:active{
+    box-shadow: 0px 0px 50px cyan;
 }
 
 .content{
@@ -52,20 +62,20 @@ main{
 
 @keyframes trans1 {
     from{
-        rotate: 45deg;
-        margin-right: 100px;
+        rotate: -45deg;
+        right: 500px;
         opacity: 0%;
     }
     to{
         rotate: 0deg;
-        margin-right: 0px;
+        right: 0px;
         opacity: 100%;
     }
 }
 
 @keyframes trans2 {
     from{
-        width: 10%;
+        width: 0%;
     }
     to{
         width: 45%;
@@ -82,4 +92,3 @@ main{
         opacity: 1;
     }
 }
-
